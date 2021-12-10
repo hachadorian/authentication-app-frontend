@@ -19,8 +19,7 @@ const Register = () => {
       variables: { email: email, password: password },
     });
     if (res.data.register.__typename === "Errors") {
-      setError(res.data.register.message);
-      return;
+      return setError(res.data.register.message);
     }
     setEmail("");
     setPassword("");
