@@ -17,7 +17,7 @@ const NavBar = ({ profile }) => {
           alt=""
           className="border rounded-xl w-12 h-12 mx-4 bg-gray-300"
         />
-        <b>{profile.name}</b>
+        {window.screen.width > 640 ? <b>{profile.name}</b> : null}
         <Dropdown />
       </div>
     </div>
