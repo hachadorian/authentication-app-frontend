@@ -21,7 +21,6 @@ const EditProfile = () => {
   const [update] = useMutation(UPDATE_MUT, {
     update: async (store, response) => {
       const dataInStore = await store.readQuery({ query: ME_QUERY });
-      console.log(response.data);
       if (response.data.update.__typename !== "Errors") {
         store.writeQuery({
           query: ME_QUERY,
